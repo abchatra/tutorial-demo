@@ -22,7 +22,7 @@ This will make an empty MakeCode repository in your Github account.
 
 By default, the content from the README file is loaded as a tutorial. You can view it using this URL:
 
-> [https://makecode.microbit.org/#tutorial:github:abchatra/tutorial-demo-test/turtle](https://makecode.microbit.org/#tutorial:github:abchatra/tutorial-demo-test/turtle)
+> [https://makecode.microbit.org/#tutorial:github:abchatra/tutorial-demo/turtle](https://makecode.microbit.org/#tutorial:github:abchatra/tutorial-demo/turtle)
 
 The url should be formatted as follows: `https://[editor URL]/#tutorial:[github-username]/[github-repository-name]`
 
