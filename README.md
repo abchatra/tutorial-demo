@@ -1,31 +1,57 @@
+## Use the tutorial
 
-> Open this page at [https://abchatra.github.io/tutorial-demo-test/](https://abchatra.github.io/tutorial-demo-test/)
+This is a microbit tutorial 
+Add new tutorial as md files 
 
-## Use as Extension
+# Sample MakeCode Tutorial
 
-This repository can be added as an **extension** in MakeCode.
+This repository is an example of how to host a MakeCode tutorial on Github. This particular tutorial is for micro:bit, but this is fully supported for Arcade and Minecraft as well.
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **New Project**
-* click on **Extensions** under the gearwheel menu
-* search for **https://github.com/abchatra/tutorial-demo-test** and import
+## Creating a Tutorial
 
-## Edit this project ![Build status badge](https://github.com/abchatra/tutorial-demo-test/workflows/MakeCode/badge.svg)
+To create your tutorial repository:
 
-To edit this repository in MakeCode.
+* Open [https://makecode.microbit.org/](https://makecode.microbit.org) (or arcade.makecode.com , minecraft.makecode.com)
+* Click on **New Project**
+* Give the project a descriptive name
+* Click on the **Github Icon** on the bottom toolbar next to the project name and sign in if prompted
+* Click **Go ahead**
 
-* open [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* click on **Import** then click on **Import URL**
-* paste **https://github.com/abchatra/tutorial-demo-test** and click import
+This will make an empty MakeCode repository in your Github account.
 
-## Blocks preview
+## Tutorial Files
 
-This image shows the blocks code from the last commit in master.
-This image may take a few minutes to refresh.
+By default, the content from the README file is loaded as a tutorial. You can view it using this URL:
 
-![A rendered view of the blocks](https://github.com/abchatra/tutorial-demo-test/raw/master/.github/makecode/blocks.png)
+> [https://makecode.microbit.org/#tutorial:github:abchatra/tutorial-demo-test/turtle](https://makecode.microbit.org/#tutorial:github:abchatra/tutorial-demo-test/turtle)
 
-#### Metadata (used for search, rendering)
+The url should be formatted as follows: `https://[editor URL]/#tutorial:[github-username]/[github-repository-name]`
 
-* for PXT/microbit
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
+You can also include additional tutorials in one repository. If you add a new file, make sure it is included in the `files` list in `pxt.json`. If you add this file from the MakeCode Editor, it will be automatically updated.
+
+The url should be formatted as follows: `https://[editor URL]/#tutorial:[github-username]/[github-repository-name]/[path-to-tutorial]`
+
+## Custom Blocks
+
+A repository containing a tutorial may also contain custom blocks for use in the tutorial. The `custom.ts` file here exports two functions as blocks. These blocks can then be used in any tutorial in the same repository. As with new tutorial files, make sure any new TypeScript files are added to the list in `pxt.json`.
+
+## Custom Localization
+
+Localized versions of the tutorial can also be added to the repository, under a `_locales` folder. This folder contains a list of sub-directories with the correctly capitalized language code (eg. zh-CN, de-DE). The localized tutorial should have the same file name as the base tutorial. To view a localized version of the tutorial, add `?lang=[language-code]` to the URL, as follows:
+
+> [http://arcade.makecode.com?lang=zh-CN#tutorial:https://github.com/microsoft/pxt-tutorial-sample/first-tutorial](http://arcade.makecode.com?lang=zh-CN#tutorial:https://github.com/microsoft/pxt-tutorial-sample/first-tutorial)
+
+## Creating a Release
+
+When you update the Github repository, it make take up to 20 minutes for your changes to be reflected in the MakeCode editor, due to caching. To force an update, you will need to create a "release":
+
+* Open [https://makecode.microbit.org/](https://makecode.microbit.org/) (or arcade.makecode.com, minecraft.makecode.com)
+* Click on **Import** on the right-hand side above the row of your projects
+* Select **Your Github Repo** and sign into Github if prompted
+* Select the repository with your tutorial
+* In the MakeCode editor, click the **Github Icon** on the bottom toolbar by the project name
+* In the **Release Zone** section of the page, click **Create a Release** and select whichever release type feels most appropriate.
+
+## License
+
+MIT
