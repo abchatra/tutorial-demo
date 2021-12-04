@@ -1,13 +1,12 @@
-## Use the tutorial
-
-This is a microbit tutorial 
-Add new tutorial as md files 
-
 # Sample MakeCode Tutorial
 
 This repository is an example of how to host a MakeCode tutorial on Github. This particular tutorial is for micro:bit, but this is fully supported for Arcade and Minecraft as well.
 
-## Creating a Tutorial
+## Markdown
+
+Tutorial is written in MarkDown and you can use tutorial-tool [https://makecode.com/tutorial-tool](https://makecode.com/tutorial-tool) to try out the syntax.
+
+## Creating a Repo for the Tutorial
 
 To create your tutorial repository:
 
